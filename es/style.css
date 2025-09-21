@@ -1,0 +1,133 @@
+:root {
+    --primary-color: #004d99; /* Azul oscuro */
+    --secondary-color: #f0f4f8; /* Gris claro, para el fondo */
+    --text-color: #333;
+    --heading-color: #1a1a1a;
+    --link-color: #007bff;
+    --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    font-weight: normal;
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+h3, h4 {
+    color: var(--heading-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+    border-bottom: none;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+ul, ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+ul li, ol li {
+    margin-bottom: 0.5rem;
+}
+
+blockquote {
+    background: #f9f9f9;
+    border-left: 5px solid var(--primary-color);
+    margin: 1.5em 10px;
+    padding: 0.5em 1.5rem;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote p {
+    display: inline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accelerating Optimization with AI and Supercomputing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Project Briefing:</h1>
+        <h2>Accelerating Optimization with Artificial Intelligence and Supercomputing</h2>
+    </header>
+
+    <main>
+        <section id="executive-summary">
+            <h3>Executive Summary</h3>
+            <p>This document synthesizes an international research project that aims to revolutionize the resolution of complex combinatorial optimization problems, specifically Mixed-Integer Linear Programming (MILP), through the integration of Artificial Intelligence (AI) and High-Performance Computing (HPC).</p>
+            <p>The project addresses a critical gap in computer science and operations research: while optimization algorithms like MILP are fundamental for sectors such as logistics, energy, and finance, their application to large-scale problems is often limited by high computational complexity. Current research, while promising, lacks a consensus on how to systematically accelerate MILP solvers.</p>
+            <p><strong>Central Proposal:</strong> The project proposes the development of a Proof of Concept (PoC) for a deep learning prototype based on the "Learning to Optimize" (L2O) technique. Instead of replacing traditional solvers, the AI model will learn to configure them optimally and provide high-quality initial solutions (warm starts), drastically accelerating the time required to find the optimal solution. The prototype will be developed and validated in an on-premises supercomputing (HPC) environment.</p>
+            <h4>Strategic Objectives:</h4>
+            <ul>
+                <li><strong>Accelerate MILP Solving:</strong> Demonstrate speedup and efficiency gains over standard solver configurations.</li>
+                <li><strong>Predict Execution Time:</strong> Develop a model capable of estimating the execution time of optimization tasks, providing a valuable tool for operational planning and policy simulation.</li>
+                <li><strong>Develop Open Tools:</strong> Produce and make available datasets, scripts, and an open-source software prototype to ensure reproducibility and foster new research.</li>
+                <li><strong>Collaboration and Infrastructure:</strong> The research is a collaboration between leading Brazilian institutions — University of Brasília (UnB) and Federal University of Rio Grande do Norte (UFRN) — and the prestigious Andalusian Interuniversity Institute of Data Science and Artificial Intelligence (DaSCI) at the University of Jaén (UJA), in Spain. The project will have access to the world-class supercomputing infrastructure of UJA's CEATIC center, including clusters equipped with NVIDIA A100 and V100 GPUs, essential for training advanced AI models.</li>
+            </ul>
+            <p><strong>Expected Impact:</strong> The project aims to generate incremental innovation, elevating the technology from a laboratory level (TRL4) to a prototype validated in a relevant environment (TRL6). The results have the potential to advance the state of the art at the intersection of Operations Research, AI, and HPC, with future applications in practical optimization challenges in public and private sectors.</p>
+        </section>
+
+        <section id="context-and-justification">
+            <h3>Context and Project Justification</h3>
+            <h4>The Relevance of Mixed-Integer Linear Programming (MILP)</h4>
+            <p>Mixed-Integer Linear Programming (MILP) is a powerful mathematical framework used to model and solve complex decision-making problems involving continuous and integer variables. Its applications are vast and critical to the modern economy, covering areas such as:</p>
+            <ul>
+                <li>Logistics and supply chain management</li>
+                <li>Energy and production planning</li>
+                <li>Financial portfolio optimization</li>
+                <li>Telecommunications and network design</li>
+            </ul>
+            <p>Over the last 20 years, the ability to solve MILP problems has increased by up to 1,000 times, driven by advances in hardware and algorithms. However, many real-world problems, especially in emerging fields like autonomous vehicles and cybersecurity, continue to demand real-time solutions that challenge the limits of current technology.</p>
+            <h4>Gaps in Scientific Literature</h4>
+            <p>Despite advances, research to accelerate MILP solvers is still emerging and fragmented. The project identifies three main gaps hindering faster progress:</p>
+            <ul>
+                <li><strong>Difficulty in Problem Classification:</strong> The absence of a systematic method for classifying MILP problem instances hinders the application of specific optimization strategies. This suggests the need to replace manual heuristics with adaptive learning approaches.</li>
+                <li><strong>Unproven Potential of L2O Technique:</strong> The "Learning to Optimize" (L2O) approach shows great potential for improving solver performance but has not yet been definitively proven or effectively integrated into existing tools.</li>
+                <li><strong>Underexplored Software Optimization in HPC:</strong> Literature on how to optimize MILP solving with parallel algorithms in High-Performance Computing (HPC) environments is scarce and incipient.</li>
+            </ul>
+        </section>
+
+        <section id="objectives-and-scope">
+            <h3>Research Objectives and Scope</h3>
+            <h4>Central Question and General Objective</h4>
+            <p>The research is guided by the following question: “Is it possible to improve the performance of MILP solvers with deep learning and high-performance computing?”</p>
+            <p>To answer this question, the project establishes the following general objective:</p>
+            <blockquote>
+                Develop and verify, within 12 months, a Proof of Concept (PoC) of an L2O deep learning pilot prototype that accelerates and improves the performance of optimization solvers and provides estimates of MILP job execution time intervals in on-premises HPC.
+            </blockquote>
+            <h4>Specific Objectives</h4>
+            <p>The project is structured into five specific and interconnected objectives:</p>
+            <ol>
+                <li><strong>O1 - Build Test Scenarios:</strong> Establish a reproducible set of problem instances (extracted from benchmark libraries like MIPLIB and MILPBench) and execution profiles for rigorous testing in the HPC environment.</li>
+                <li><strong>O2 - Standardize Data Collection:</strong> Develop scripts and a standardized scheme for collecting rich data (logs, execution traces, resource usage, solver parameters), ensuring the quality and reproducibility of experiments.</li>
+                <li><strong>O3 - Prototype the L2O Pilot:</strong> Develop the core of the project: a deep learning model (neural network) that, after training, will recommend optimized parameter configurations (presets) and generate initial solutions (warm-starts) to accelerate the MILP solver.</li>
+                <li><strong>O4 - Obtain Execution Time Prediction:</strong> Use the data collected during L2O model training to build an execution time prediction system, offering point estimates and confidence bands (e.g., HitRate@±25%) for operational support.</li>
+                <li><strong>O5 - Implement Analysis with Generative AI:</strong> Develop a generative AI agent to analyze and communicate research results through interactive dashboards, translating complex technical data into accessible summaries for managers and operators.</li>
+            </ol>
+        </section>
+
+        <section id="methodological-and-technological-approach">
+            <h3>Methodological and Technological Approach</h3>
+            <h4>The "Learning to Optimize" (L2O) Strategy</h4>
+            <p>The project's methodological core is the L2O technique, which represents a paradigm shift from traditional approaches. Instead of attempting to replace complex and well-established solvers, L2O uses AI models to guide them intelligently. The approach is based on a recent tutorial by Chen, Liu, and Yin (2024) and focuses on two fronts:</p>
+            <ul>
+                <li><strong>Solver Pre-configuration:</strong> The neural network will be trained to analyze the characteristics of an MILP instance and recommend a set of hyperparameters (a preset) that maximizes solver performance for that specific problem type.</li>
+                <li><strong>Warm Starts Generation:</strong> The model will also learn to predict a high-quality initial solution. Providing this "hint" to the solver can drastically prune the branch-and-bound algorithm's search tree, leading to much faster convergence.</li>
+            </ul>
+            <p>For modeling, the project will explore Graph Neural Networks (GNN) and their convolutional variants (GCNN), architectures especially suited to represent the structure of optimization problems.</p>
+            <h4>Testing Platform and Data Collection</h4>
+            <p>Experiments will be conducted rigorously and systematically:</p>
+            <ul>
+                <li><strong>Solvers:</strong> State-of-the-art solvers will be used, including Gurobi (commercial, with academic license) and SCIP (open source), allowing for performance comparison and validation across different platforms.</li>
+                <li><strong>HPC Environment:</strong> Data collection will be performed in an on-premises HPC environment, possibly managed by Slurm, reflecting a real-world usage scenario in research centers and large organizations.</li>
+                <li><strong>Instrumentation:</strong> A standardized runner will be developed to automate instance execution, recording essential metrics such as wait and execution times, resource usage (CPU, memory), solver events, and applied configurations.</li>
+            </ul>
+            <h4>Success Metrics</h4>
+            <p>The performance of the L2O prototype will be evaluated against baselines (standard solver configurations) using a set of clear and objective metrics:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Metric</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Performance (Primary)</td>
+                        <td>Speedup (S)</td>
+                        <td>Measures how many times faster the L2O method is than the baseline.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Efficiency (E)</td>
+                        <td>Evaluates the speed gain relative to computational resources consumed.</td>
+                    </tr>
+                    <tr>
+                        <td>Prediction</td>
+                        <td>MdAPE</td>
+                        <td>Median Absolute Percentage Error; measures the "typical" error of execution time prediction.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>HitRate@±α%</td>
+                        <td>Fraction of predictions that fell within an acceptable error margin (e.g., ±25%).</td>
+                    </tr>
+                    <tr>
+                        <td>Operational (Desirable)</td>
+                        <td>Wait Time</td>
+                        <td>Queue metrics indicating impact on the production environment, such as average wait time and job throughput.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="international-collaboration-and-infrastructure">
+            <h3>International Collaboration and Infrastructure</h3>
+            <h4>The Strategic Partnership with DaSCI Institute (Spain)</h4>
+            <p>The collaboration with the Andalusian Interuniversity Institute DaSCI at the University of Jaén is a pillar of the project. DaSCI is a center of excellence in AI and Data Science, with UJA ranked as the third-best university in Spain for Artificial Intelligence by the U.S. News & World Report (2025). The partnership offers a fundamental synergy:</p>
+            <ul>
+                <li>The Brazilian team contributes expertise in Operations Research, applied AI, and HPC.</li>
+                <li>The Spanish team, led by Prof. Dr. Pedro Gonzalez Garcia, complements with deep knowledge in large-scale data mining, evolutionary algorithms, and processing in HPC environments.</li>
+            </ul>
+            <h4>Supercomputing Infrastructure (CEATIC)</h4>
+            <p>The project will have access to the advanced infrastructure of the Center for Advanced Studies in Information and Communication Technologies (CEATIC) at UJA. This infrastructure is essential for the viability of the research and includes:</p>
+            <ul>
+                <li><strong>ADA Cluster (GPU):</strong> Designed for AI and HPC, equipped with nodes containing cutting-edge GPUs, such as NVIDIA Tesla A100 (Ampere), Tesla V100 (Volta), and GeForce RTX 2080 Ti. These resources are crucial for efficiently training deep learning models.</li>
+                <li><strong>TURING Cluster (HPC and Big Data):</strong> Composed of 32 computing and Big Data nodes, ideal for running CPU-intensive parallel simulations and preprocessing large volumes of data.</li>
+                <li><strong>Virtualization and Cloud Services:</strong> A flexible infrastructure based on Proxmox VE, allowing for the creation of isolated test environments and secure sharing of datasets and results.</li>
+            </ul>
+        </section>
+        
+        <section id="relevance-and-expected-impacts">
+            <h3>Relevance and Expected Impacts</h3>
+            <h4>Scientific and Technological Contributions</h4>
+            <p>The project was designed to generate concrete and high-value products for the scientific and technological community:</p>
+            <ul>
+                <li><strong>Open and Reproducible Dataset:</strong> A dataset with instances and execution profiles, documented and published.</li>
+                <li><strong>Scripts Repository:</strong> Open-source code with configuration, submission, and collection scripts, as well as log schemas, promoting open science.</li>
+                <li><strong>Software (L2O Pilot):</strong> The L2O prototype will have its source code made available and its intellectual property registered, with potential for future integration into open-source solvers.</li>
+                <li><strong>Scientific Publications:</strong> Generation of articles for high-impact journals and conferences in the areas of OR, AI, and HPC.</li>
+                <li><strong>Results Dashboard:</strong> A visualization tool that clearly and accessibly demonstrates efficiency gains.</li>
+            </ul>
+            <h4>Innovation and Application Potential</h4>
+            <p>The project's main innovation lies in the integration of three distinct fields (OR, AI, HPC) to solve a practical and challenging problem. By the end of 12 months, it is expected to advance the technology readiness level from TRL4 (laboratory validation) to TRL6 (prototype demonstrated in a relevant environment). This proof of concept will pave the way for future developments and applications in sectors critically dependent on optimization, such as energy, logistics, transportation, and finance.</p>
+        </section>
+
+        <section id="scientific-dissemination-plan">
+            <h3>Scientific Dissemination Plan</h3>
+            <p>The project includes a comprehensive and multifaceted scientific dissemination plan (SDP), with the objective of making the generated knowledge accessible to a broad and non-specialized audience. Key actions include:</p>
+            <ul>
+                <li><strong>Digital Communication:</strong> Creation of a project microsite (in Portuguese, Spanish, and English), management of social media channels (LinkedIn, YouTube), and production of podcasts and webinars.</li>
+                <li><strong>Accessible Materials:</strong> Development of video tutorials, interactive notebooks, and a final e-book in accessible language, explaining the research concepts and results.</li>
+                <li><strong>Academic and Public Engagement:</strong> Submission of scientific articles, software registration, and participation in innovation events, fairs, and showcases.</li>
+            </ul>
+        </section>
+
+        <section id="team-and-governance">
+            <h3>Team and Governance</h3>
+            <p>The project's success will be ensured by a multidisciplinary team and clear governance.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <tr>
+                            <th>Role</th>
+                            <th>Responsible</th>
+                            <th>Institution</th>
+                        </tr>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Project Coordinator</td>
+                        <td>Prof. Dr. Victor Rafael Rezende Celestino</td>
+                        <td>University of Brasília (UnB)</td>
+                    </tr>
+                    <tr>
+                        <td>Academic Supervisor (International)</td>
+                        <td>Prof. Dr. Pedro Gonzalez Garcia</td>
+                        <td>DaSCI / University of Jaén (UJA)</td>
+                    </tr>
+                    <tr>
+                        <td>Collaborators (Brazil)</td>
+                        <td>Researchers from LAMFO and LAICO</td>
+                        <td>University of Brasília (UnB)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Researchers from LAPPS</td>
+                        <td>Federal University of Rio Grande do Norte (UFRN)</td>
+                    </tr>
+                    <tr>
+                        <td>Collaborators (Spain)</td>
+                        <td>Researchers from DaSCI</td>
+                        <td>University of Jaén (UJA)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Governance will include bi-weekly follow-up meetings and the submission of quarterly reports to ensure alignment and achievement of established goals.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>This material was generated from the project briefing "Accelerating Optimization with AI and Supercomputing."</p>
+    </footer>
+
+</body>
+</html>
