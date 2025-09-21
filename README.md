@@ -10,7 +10,7 @@ O objetivo deste projeto é desenvolver uma prova de conceito (PoC) que demonstr
 
 Para uma visão completa e detalhada do projeto, incluindo seus objetivos, metodologia, colaborações e impactos esperados, você pode ler o eBook completo hospedado no GitHub Pages.
 
-**[Clique aqui para ler o eBook do projeto em Português (PT-BR)](https://cvictorr2508.github.io/milp-l2o-hpc-posdoc/pt-br/)**
+**[Clique aqui para ler o eBook do projeto em Português (PT-BR)](https://unb-lamfo-or-ai-hpc.github.io/milp-l2o-hpc-posdoc/pt-br/)**
 
 ---
 
@@ -28,7 +28,7 @@ The project aims to develop a Proof of Concept (PoC) demonstrating how deep lear
 
 For a complete and detailed overview of the project, including its objectives, methodology, collaborations, and expected impacts, you can read the full eBook hosted on GitHub Pages.
 
-**[Click here to read the project eBook in English (EN)](https://cvictorr2508.github.io/milp-l2o-hpc-posdoc/en/)**
+**[Click here to read the project eBook in English (EN)](https://unb-lamfo-or-ai-hpc.github.io/milp-l2o-hpc-posdoc/en/)**
 
 ---
 
@@ -46,7 +46,7 @@ El proyecto tiene como objetivo desarrollar una prueba de concepto (PoC) que dem
 
 Para una visión completa y detallada del proyecto, incluyendo sus objetivos, metodología, colaboraciones e impactos esperados, puede leer el eBook completo alojado en GitHub Pages.
 
-**[Haga clic aquí para leer el eBook del proyecto en Español (ES)](https://cvictorr2508.github.io/milp-l2o-hpc-posdoc/es/)**
+**[Haga clic aquí para leer el eBook del proyecto en Español (ES)](https://unb-lamfo-or-ai-hpc.github.io/milp-l2o-hpc-posdoc/es/)**
 
 ---
 
