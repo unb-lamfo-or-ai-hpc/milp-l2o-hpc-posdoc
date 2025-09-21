@@ -12,9 +12,8 @@ O objetivo deste projeto é desenvolver uma prova de conceito (PoC) que demonstr
 
 Para uma visão completa e detalhada do projeto, incluindo seus objetivos, metodologia, colaborações e impactos esperados, você pode ler o eBook completo hospedado no GitHub Pages.
 
-**[Clique aqui para ler o eBook do projeto](https://[SEU_NOME_DE_USUARIO].github.io/[NOME_DO_REPOSITORIO])**
+**[Clique aqui para ler o eBook do projeto](https://cvictorr2508.github.io/milp-l2o-hpc-posdoc)**
 
-*Lembre-se de substituir `[SEU_NOME_DE_USUARIO]` e `[NOME_DO_REPOSITORIO]` pelo seu nome de usuário e pelo nome deste repositório no link acima.*
 
 ---
 
